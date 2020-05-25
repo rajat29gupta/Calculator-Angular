@@ -1,0 +1,46 @@
+<div class="main">
+
+  <!-- Border -->
+  <div class="main-border">
+    <!-- nav-bar -->
+    <div class="nav">
+      <h6>Standard</h6>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <input type="text" [ngModel]="formattedTokens" readonly>
+
+    <input type="text" [ngModel]="input"  readonly>
+  </div>
+
+  <!-- keys -->
+  <div class="keys">
+    <div>
+      <button mat-raised-button color="primary" (click)="insertChar('7')">7</button>
+      <button mat-raised-button color="primary" (click)="insertChar('8')">8</button>
+      <button mat-raised-button color="primary" (click)="insertChar('9')">9</button>
+      <button mat-raised-button color="primary" (click)="insertOperator('*')">*</button>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" (click)="insertChar('4')">4</button>
+      <button mat-raised-button color="primary" (click)="insertChar('5')">5</button>
+      <button mat-raised-button color="primary" (click)="insertChar('6')">6</button>
+      <button mat-raised-button color="primary" (click)="insertOperator('-')">-</button>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" (click)="insertChar('1')">1</button>
+      <button mat-raised-button color="primary" (click)="insertChar('2')">2</button>
+      <button mat-raised-button color="primary" (click)="insertChar('3')">3</button>
+      <button mat-raised-button color="primary" (click)="insertOperator('+')">+</button>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" (click)="insertOperator('/')">/</button>
+      <button mat-raised-button color="primary" (click)="insertChar('0')">0</button>
+      <button mat-raised-button color="primary" (click)="insertChar('.')">.</button>
+      <button mat-raised-button color="primary" (click)="getresult('=')">=</button>
+    </div>
+  </div>
+
+</div>
