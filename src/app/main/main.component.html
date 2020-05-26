@@ -1,46 +1,86 @@
+<!-- background: #EAE9E9; -->
 <div class="main">
+  <div class="main-content">
+    <!-- Border -->
+    <mat-card>
+      <div class="header text-right">
+        <span class="text-muted res-css">{{ inputData }}</span>
+        <hr />
+        <!-- Header -->
 
-  <!-- Border -->
-  <div class="main-border">
-    <!-- nav-bar -->
-    <div class="nav">
-      <h6>Standard</h6>
-    </div>
+        <span class="calc-display">
+          <h6>{{ result }}</h6>
+        </span>
+      </div>
+
+      <!-- keys -->
+      <div class="keys">
+        <div>
+          <button mat-raised-button color="primary">~</button>
+          <button mat-raised-button color="primary">~</button>
+          <button mat-raised-button color="primary">~</button>
+          <button mat-raised-button color="primary" (click)="insertOperator('clear')">
+            C
+          </button>
+        </div>
+        <div>
+          <button mat-raised-button color="primary" (click)="insertChar(7)">
+            7
+          </button>
+          <button mat-raised-button color="primary" (click)="insertChar(8)">
+            8
+          </button>
+          <button mat-raised-button color="primary" (click)="insertChar(9)">
+            9
+          </button>
+          <button mat-raised-button color="primary" (click)="insertOperator('multiply')">
+            *
+          </button>
+        </div>
+        <div>
+          <button mat-raised-button color="primary" (click)="insertChar(4)">
+            4
+          </button>
+          <button mat-raised-button color="primary" (click)="insertChar(5)">
+            5
+          </button>
+          <button mat-raised-button color="primary" (click)="insertChar(6)">
+            6
+          </button>
+          <button mat-raised-button color="primary" (click)="insertOperator('minus')">
+            -
+          </button>
+        </div>
+        <div>
+          <button mat-raised-button color="primary" (click)="insertChar(1)">
+            1
+          </button>
+          <button mat-raised-button color="primary" (click)="insertChar(2)">
+            2
+          </button>
+          <button mat-raised-button color="primary" (click)="insertChar(3)">
+            3
+          </button>
+          <button mat-raised-button color="primary" (click)="insertOperator('plus')">
+            +
+          </button>
+        </div>
+        <div>
+          <button mat-raised-button color="primary" (click)="insertOperator('divide')">
+            /
+          </button>
+          <button mat-raised-button color="primary" (click)="insertChar(0)">
+            0
+          </button>
+          <button mat-raised-button color="primary" (click)="insertOperator('dot')">
+            .
+          </button>
+          <button mat-raised-button color="primary" (click)="solution()">
+            =
+          </button>
+
+        </div>
+      </div>
+    </mat-card>
   </div>
-
-  <!-- Header -->
-  <div class="header">
-    <input type="text" [ngModel]="formattedTokens" readonly>
-
-    <input type="text" [ngModel]="input"  readonly>
-  </div>
-
-  <!-- keys -->
-  <div class="keys">
-    <div>
-      <button mat-raised-button color="primary" (click)="insertChar('7')">7</button>
-      <button mat-raised-button color="primary" (click)="insertChar('8')">8</button>
-      <button mat-raised-button color="primary" (click)="insertChar('9')">9</button>
-      <button mat-raised-button color="primary" (click)="insertOperator('*')">*</button>
-    </div>
-    <div>
-      <button mat-raised-button color="primary" (click)="insertChar('4')">4</button>
-      <button mat-raised-button color="primary" (click)="insertChar('5')">5</button>
-      <button mat-raised-button color="primary" (click)="insertChar('6')">6</button>
-      <button mat-raised-button color="primary" (click)="insertOperator('-')">-</button>
-    </div>
-    <div>
-      <button mat-raised-button color="primary" (click)="insertChar('1')">1</button>
-      <button mat-raised-button color="primary" (click)="insertChar('2')">2</button>
-      <button mat-raised-button color="primary" (click)="insertChar('3')">3</button>
-      <button mat-raised-button color="primary" (click)="insertOperator('+')">+</button>
-    </div>
-    <div>
-      <button mat-raised-button color="primary" (click)="insertOperator('/')">/</button>
-      <button mat-raised-button color="primary" (click)="insertChar('0')">0</button>
-      <button mat-raised-button color="primary" (click)="insertChar('.')">.</button>
-      <button mat-raised-button color="primary" (click)="getresult('=')">=</button>
-    </div>
-  </div>
-
 </div>

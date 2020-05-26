@@ -1,8 +1,23 @@
 .main {
-  /* display: flex;
-  justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .main-border {
   width: fit-content;
   text-align: end;
+}
+
+button:focus {
+  outline: none !important;
+}
+.res-css {
+  white-space: nowrap;
+  width: 254px;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
