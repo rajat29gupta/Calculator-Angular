@@ -4,5 +4,8 @@ app-main{
   padding: 20px;
   width: inherit;
   height: 100%;
-
+  background: linear-gradient(to right, #8500ff, #ccff00);
 }
+
+
+

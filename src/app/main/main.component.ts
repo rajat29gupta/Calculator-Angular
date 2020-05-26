@@ -92,6 +92,7 @@ export class MainComponent implements OnInit {
 
   // Insert Character
   insertChar(insertNumber: any) {
+
     this.inputData += "" + insertNumber;
     if (this.firstValue) {
       const newValue = this.firstNum * 10 + insertNumber;
@@ -133,7 +134,7 @@ export class MainComponent implements OnInit {
     if (key === 'c' || key === 'backspace') {
       this.reset();
     } else if (key === ',' || key === '.') {
-      // this.insertChar('.');
+      this.insertChar('.'); 555
     } else if (!isNaN(parseInt(key))) {
       this.insertChar(parseInt(key));
     } else if (key === 'enter') {
